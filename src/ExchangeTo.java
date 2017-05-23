@@ -13,8 +13,6 @@ import java.util.Scanner;
 
 public class ExchangeTo {
 
-    //private static
-    //private static double  result;
 
 
 
@@ -42,7 +40,7 @@ public class ExchangeTo {
             jsonstr = scan.nextLine();
 
         } catch (Exception e) {
-            System.out.println("Currency error");
+            System.out.println("Currency corrupted or invalid");
         }
 
             JsonObject jobj = new Gson().fromJson(jsonstr, JsonObject.class);
