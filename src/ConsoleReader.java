@@ -35,7 +35,7 @@ public class ConsoleReader {
                 productName = productName + " " + stk.nextToken();
             }
             DBOperation.insert(datestr, sumDouble, valuta, productName);
-            DBOperation.selectAll();
+            DBOperation.selectAll(datestr);
         }
         else if (checklist(str) == true) {
             comm = stk.nextToken();

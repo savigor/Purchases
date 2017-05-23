@@ -278,18 +278,17 @@ public class DBOperation {
             System.out.println("TOTAL in "+valutadb+" "+String.format("%.2f", sum));
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+
+             System.out.println(e.getMessage());
 
         } catch (Exception e) {
-            System.out.println(e);
-            System.out.println("unavalible Currency");
+           // System.out.println(e);
+            System.out.println("Unavalible Currency");
         }
     }
 
-         /**
-          * @param args the command line arguments
-          */
-         public static void main(String[] args) throws Exception {
+
+         /*public static void main(String[] args) throws Exception {
            //createTable();
              //createDatabase(fileName);
             // connect();
@@ -299,7 +298,8 @@ public class DBOperation {
              selectTotal("CAN");
             //selectAll();
           // System.out.println(ExchangeTo.getFixerRates("PLN","EUR"));
-         }
+         }*/
 
-     }
+
+}
 

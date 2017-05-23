@@ -16,12 +16,7 @@ public class ExchangeTo {
     //private static
     //private static double  result;
 
-    public static void main(String[] args) throws Exception {
 
-        getFixerRates("PLN", "EUR");
-
-
-    }
 
     /**
      * This method get the JSON data from Fixer.io
@@ -47,7 +42,7 @@ public class ExchangeTo {
             jsonstr = scan.nextLine();
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Currency error");
         }
 
             JsonObject jobj = new Gson().fromJson(jsonstr, JsonObject.class);
