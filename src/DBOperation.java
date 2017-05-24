@@ -1,10 +1,11 @@
+
+import java.sql.*;
+
 /**
  * Created by acme on 19.05.17.
  * This Class has Methods to operate with database
  */
 
-
-import java.sql.*;
 
 public class DBOperation {
         private static String fileName = "database.db";
@@ -12,10 +13,10 @@ public class DBOperation {
         private static String url = dbPath + fileName;
          /**
           *  Connect to a sample database
-          *  don't using
+          *  don't using ((
           */
 
-         public static void connect() {
+         /*public static void connect() {
              Connection conn = null;
              try {
                  // db parameters
@@ -36,7 +37,7 @@ public class DBOperation {
                      System.out.println(ex.getMessage());
                  }
              }
-         }
+         }*/
 
          public static void createDatabase(String fileName) {
 
@@ -46,7 +47,7 @@ public class DBOperation {
                  if (conn != null) {
                      DatabaseMetaData meta = conn.getMetaData();
                      System.out.println("The driver name is " + meta.getDriverName());
-                     System.out.println("A new database has been created.");
+                     //System.out.println("A new database has been created.");
                  }
 
              } catch (SQLException e) {
@@ -59,8 +60,6 @@ public class DBOperation {
      *
      */
     public static void createTable() {
-        // SQLite connection string
-        //String url = DBOperation.url + fileName;
 
         // SQL statement for creating a new table
         String sql = "CREATE TABLE IF NOT EXISTS bouthProduct (\n"
@@ -75,7 +74,7 @@ public class DBOperation {
              Statement stmt = conn.createStatement()) {
             // create a new table
             stmt.execute(sql);
-            System.out.println("A new table has been created");
+            System.out.println("Database is avalible");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -92,7 +91,9 @@ public class DBOperation {
             System.out.println(e.getMessage());
 
         }
+        System.out.println("DBTable is DROPED!");
     }
+
 
 
     /*private Connection connectInsert() {
@@ -105,8 +106,8 @@ public class DBOperation {
             System.out.println(e.getMessage());
         }
         return conn;
-    }*/
-
+    }
+*/
     /**
      * Insert a new row into the warehouses table
      *
@@ -234,7 +235,6 @@ public class DBOperation {
                     d = rs.getDouble("sumdouble");
                     v = rs.getString("valuta");
                     pN = rs.getString("prodName");
-                    //System.out.println();
                     System.out.println("\n" + s);
                     System.out.println(pN + " " + d + " " + v);
                 }
@@ -278,28 +278,17 @@ public class DBOperation {
             System.out.println("TOTAL in "+valutadb+" "+String.format("%.2f", sum));
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+
+             System.out.println(e.getMessage());
 
         } catch (Exception e) {
-            System.out.println(e);
-            System.out.println("unavalible Currency");
+           // System.out.println(e);
+            System.out.println("Unavalible Currency");
         }
     }
 
-         /**
-          * @param args the command line arguments
-          */
-         public static void main(String[] args) throws Exception {
-           //createTable();
-             //createDatabase(fileName);
-            // connect();
-            //insert ("2017-05-20", 13.5, "USD", "Juice");
-             //selectAll("2017-10-10");
-         //createTableRates();
-             selectTotal("CAN");
-            //selectAll();
-          // System.out.println(ExchangeTo.getFixerRates("PLN","EUR"));
-         }
 
-     }
+
+
+}
 
