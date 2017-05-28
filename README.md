@@ -16,6 +16,8 @@ db - located purge database if will need
  * 
 For correctly work the program must have internet connection.
 
+In the directory "jar" is builded java program
+
 ========================================================================================
 Create by JDK in linux
 
