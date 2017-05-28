@@ -14,25 +14,20 @@ db - located purge database if will need
  * clear yyyy-mm-dd - delete data at the date
  * total CUR - return summ the all positions from db in CUR currency.
  * 
-For correctly work the program must internet connection. 
- 
-Create program: 
-By maven
+For correctly work the program must have internet connection.
 
-in this String will use Your groupId=xxx.xxxxx.xxx & artifactId=xxxxxx
+=====================================================================================================================
+Create by JDK in linux
+create some directory and download to directory source files (src/ and lib/ directories must have)
 
-mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+> mkdir jar
+> cp -r lib/ jar
+> javac -verbose -d jar -cp lib/gson-2.8.0.jar:lib/sqlite-jdbc-3.18.0.jar -sourcepath src  src/Purchases.java
+> jar cfm Purchases.jar lib/MANIFEST.MF ./*
+> rm *.class
+> rm lib/MANIFEST.MF
 
-in generated folder delete the test folder in /generated_filder/src
+to test run
 
-change groupeId & artifactId in pom.xml
-
-mvn package
-
-
-
-
-
-
-
+> java -jar Purchases.jar
 
