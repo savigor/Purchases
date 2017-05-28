@@ -16,18 +16,19 @@ db - located purge database if will need
  * 
 For correctly work the program must have internet connection.
 
-=====================================================================================================================
+========================================================================================
 Create by JDK in linux
-create some directory and download to directory source files (src/ and lib/ directories must have)
 
-> mkdir jar
-> cp -r lib/ jar
-> javac -verbose -d jar -cp lib/gson-2.8.0.jar:lib/sqlite-jdbc-3.18.0.jar -sourcepath src  src/Purchases.java
-> jar cfm Purchases.jar lib/MANIFEST.MF ./*
-> rm *.class
-> rm lib/MANIFEST.MF
+Create some directory and download to directory source files (src/ and lib/ directories must have)
+
+# mkdir jar
+# cp -r lib/ jar
+# javac -verbose -d jar -cp lib/gson-2.8.0.jar:lib/sqlite-jdbc-3.18.0.jar -sourcepath src  src/Purchases.java
+# jar cfm Purchases.jar lib/MANIFEST.MF ./*
+# rm *.class
+# rm lib/MANIFEST.MF
 
 to test run
 
-> java -jar Purchases.jar
+# java -jar Purchases.jar
 
