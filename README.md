@@ -19,18 +19,20 @@ For correctly work the program must have internet connection.
 In the directory "jar" is builded java program
 
 ========================================================================================
-Create by JDK in linux
+ Create by JDK in linux
 
-Create some directory and download to directory source files (src/ and lib/ directories must have)
+ Create some directory and download to directory source files (src/ and lib/ directories must have)
 
-$ mkdir jar
-$ cp -r lib/ jar
-$ javac -verbose -d jar -cp lib/gson-2.8.0.jar:lib/sqlite-jdbc-3.18.0.jar -sourcepath src  src/Purchases.java
-$ jar cfm Purchases.jar lib/MANIFEST.MF ./*
-$ rm *.class
-$ rm lib/MANIFEST.MF
+ run next command from directory:
+
+ 1. mkdir jar
+ 2. cp -r lib/ jar
+ 3. javac -verbose -d jar -cp lib/gson-2.8.0.jar:lib/sqlite-jdbc-3.18.0.jar -sourcepath src  src/Purchases.java
+ 4. jar cfm Purchases.jar lib/MANIFEST.MF ./*
+ 5. rm *.class
+ 6. rm lib/MANIFEST.MF
 
 for test run
 
-$ java -jar Purchases.jar
+ * java -jar Purchases.jar
 
