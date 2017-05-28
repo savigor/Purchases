@@ -35,4 +35,5 @@ In the directory "jar" is builded java program
 for test run
 
  * java -jar Purchases.jar
+========================================================================================
 
